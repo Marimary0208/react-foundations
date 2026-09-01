@@ -1,10 +1,10 @@
 <html>
-   <head>
+  <head>
     <script type="importmap">
       {
         "imports": {
           "react": "https://esm.sh/react@latest?dev",
-          "react-dom/client": "https://esm.sh/react-dom@latest/client?dev"
+          "react-dom/client": "https://esm.sh/react-dom@latest/client?dev",
           "react/jsx-runtime": "https://esm.sh/react@latest/jsx-runtime?dev"
         }
       }
@@ -19,9 +19,14 @@
       import { createRoot } from 'react-dom/client';
  
       const domNode = document.getElementById('app');
+
+      function header() {
+        return <h1>Develop. Preview. Ship.</h1>;
+      }
+
       const root = createRoot(domNode);
-      root.render(<h1>Develop. Preview. Ship.</h1>);
-    </script>
+      // Capitalize the React Component
+      root.render(<Header />);
     </script>
   </body>
 </html>
