@@ -22,16 +22,23 @@
  
   function Header({ title }) {
     console.log(title);
-    return <h1>title</h1>;
+    return <h1>{title}</h1>;
   }
 
   function HomePage() {
-    return (
-      <div>
-      <Header title="React" />
-      </div>
-    );
-  }
+      const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+
+      return (
+        <div>
+          <Header title="Develop. Preview. Ship." />
+          <ul>
+            {names.map((name) => (
+              <li key={name}>{name}</li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
  
   const root = createRoot(domNode);
   // Capitalize the React Component
